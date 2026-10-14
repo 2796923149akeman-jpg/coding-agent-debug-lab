@@ -4,5 +4,10 @@ __pycache__/
 venv/
 .DS_Store
 Thumbs.db
+desktop.ini
 .env
 my-report.md
+/labs/02-photo-organizer/input/
+/labs/02-photo-organizer/output/
+/labs/02-photo-organizer/reports/
+/labs/02-photo-organizer/demo/

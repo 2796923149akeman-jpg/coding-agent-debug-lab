@@ -1,0 +1,23 @@
+# 文件规范与版本
+
+```text
+README.md                       总入口
+docs/                           共用说明、汇报安排与记录模板
+labs/
+  01-grade-stats/                成绩案例：程序、测试、CSV 与独立说明
+  02-photo-organizer/            照片案例：任务、初始化、自检、依赖与工具测试
+    data/photos.zip             原始素材资产
+    data/manifest.json          内容校验与修改时间
+    input/                      初始化生成，Git 忽略
+    output/                     学生结果，Git 忽略
+    reports/                    学生报告，Git 忽略
+```
+
+- 目录和工具文件使用小写英文、连字符或下划线；面向同学的文字为中文。
+- Python、Markdown、JSON、依赖文件使用 UTF-8；通过 `.gitattributes` 统一文本换行为 LF。
+- 原始照片文件名与字节保持不变，含刻意设置的 `.DS_Store`、`Thumbs.db`、`desktop.ini`；它们只封装在素材 ZIP 内，不能按日常清理规则删掉。
+- 根目录不堆放重复 ZIP、执行输出、缓存、答案或汇报二进制文件。发布用压缩包由 GitHub 标签自动提供。
+- `.gitignore` 忽略虚拟环境、缓存、练习输出和本地记录。只提交代码、必要素材、依赖声明与说明。
+- `classroom-v1` 保留旧单案例布局；`classroom-v2` 固定为双案例布局。已发布标签不移动，历史下载继续有效。
+
+本仓库是学生练习材料。教师版含答案，单独保存在汇报者本地；不应作为学生 Agent 的工作区。需要重做时解压到新目录，保留上次结果。

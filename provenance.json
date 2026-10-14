@@ -1,0 +1,15 @@
+{
+  "source": "Coding_Agents_两人汇报材料包/demo/coding-agent-demo",
+  "packaged_on": "2026-10-14",
+  "note": "Original case files copied byte-for-byte before Git line-ending normalization. Generation prompts are reconstructed, not an original transcript.",
+  "sha256": {
+    "grade_stats.py": "079f75be26ec2967d21b117e3cde7cb1b77c88313480e55253d79c0a0822e8ee",
+    "test_grade_stats.py": "bb2a89e4d993e658887ffb06f39d59bc4457678fdd6c8bee4cdc3708d657767d",
+    "data/scores.csv": "87eb6f24dd3e2794e39f4704e8873e0a9a95a3bc6ab49e06b0bdc60e2dd5e010"
+  },
+  "normalized_lf_sha256": {
+    "grade_stats.py": "079f75be26ec2967d21b117e3cde7cb1b77c88313480e55253d79c0a0822e8ee",
+    "test_grade_stats.py": "bb2a89e4d993e658887ffb06f39d59bc4457678fdd6c8bee4cdc3708d657767d",
+    "data/scores.csv": "87eb6f24dd3e2794e39f4704e8873e0a9a95a3bc6ab49e06b0bdc60e2dd5e010"
+  }
+}

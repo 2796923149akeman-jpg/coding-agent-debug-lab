@@ -2,7 +2,7 @@
 
 ## 可以确认的来源与边界
 
-这份练习整理自已有的《Coding Agents 两人汇报材料包》中的 `demo/coding-agent-demo`。本次发布保留了其中的 `grade_stats.py`、`test_grade_stats.py` 和 `data/scores.csv`，可用根目录 `provenance.json` 的 SHA-256 核对。
+这份练习整理自已有的《Coding Agents 两人汇报材料包》中的 `demo/coding-agent-demo`。本次发布保留了其中的 `grade_stats.py`、`test_grade_stats.py` 和 `data/scores.csv`，可用本案例目录中的 `provenance.json` 的 SHA-256 核对。
 
 原材料明确将它设计为一个“故意保留错误”的课堂案例：初始一项测试通过、两项报错，另有备用正确版本。它不是对真实软件事故的记录，也不是 AI 在实际业务中偶然写错代码的证据。
 
@@ -50,7 +50,7 @@ instructor 是正确实现；两版测试文件内容完全一致。
 不要声称未执行的命令已经成功。不要修改测试预期来制造通过。
 ```
 
-不同模型可能生成不同代码结构；复现目标是同样的需求、故障类型和验收结果，不是保证每个字符都一致。若需要完全相同的课堂起点，请直接下载本仓库的 `classroom-v1` 标签版本。
+不同模型可能生成不同代码结构；复现目标是同样的需求、故障类型和验收结果，不是保证每个字符都一致。若需要完全相同的课堂起点，请从仓库 README 下载当前实操包，使用其中的 `labs/01-grade-stats`。
 
 ## 验证 AI 生成的案例
 

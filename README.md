@@ -1,39 +1,43 @@
-# Coding Agent 课堂实操：从修 Bug 到完成文件整理任务
+# Coding Agent 课堂实操：成绩纠错与照片整理
 
-同一个仓库，两个独立练习。先用成绩统计体验“读取 → 测试 → 修复 → 验收”，再用照片整理体验“理解需求 → 编写程序 → 实际运行 → 自检 → 迭代”。
+**课堂依次演示两个案例，同学下载后按相同顺序操作。** 第一个案例让 AI 修复已有程序，第二个案例让 AI 根据需求编写程序、整理文件并验证结果。通过两次实际操作，理解 Coding Agent 怎样利用文件、工具和运行反馈完成任务。
 
-| 练习 | 内容 | 建议时间 | 依赖 |
+## 第一次来，从这里开始
+
+1. [下载当前完整实操包 ZIP](https://github.com/2796923149akeman-jpg/coding-agent-debug-lab/archive/refs/heads/main.zip)，解压到一个新的文件夹。
+2. 打开 [同学上手指南](docs/GETTING_STARTED.md)，按步骤检查 Python、打开案例目录和 AI 工作区。
+3. 先完成 [01 成绩统计纠错](labs/01-grade-stats/README.md)，再完成 [02 照片整理](labs/02-photo-organizer/README.md)。
+
+ZIP 解压后的主文件夹通常叫 `coding-agent-debug-lab-main`。下载一次就包含两个案例，无需 Git 或 GitHub 账号。
+
+| 课堂案例 | 你交给 AI 的任务 | 观察重点 | 完成证据 |
 | --- | --- | --- | --- |
-| [01 成绩统计](labs/01-grade-stats/README.md) | 修复空白成绩处理，保留原有三个测试 | 15～20 分钟 | Python 标准库 |
-| [02 照片整理](labs/02-photo-organizer/README.md) | 将 205 个混杂文件分类归档，识别重复，保留完整记录 | 30～50 分钟 | Python + Pillow |
+| 01 成绩统计 | 修复空白成绩处理错误 | 读代码、复现报错、最小修改、重新测试 | 三项测试通过；平均分 85.0、未填写 1 人 |
+| 02 照片整理 | 编写程序整理 205 个混杂文件 | 理解需求、观察数据、编写与运行、根据自检迭代 | 205 进、205 出；输入未变；清单、日期和重复结果可核对 |
 
-## 下载与开始
+## 你要理解的 Coding Agent
 
-1. [下载两个案例的固定课堂版本 ZIP](https://github.com/2796923149akeman-jpg/coding-agent-debug-lab/archive/refs/tags/classroom-v2.zip)，解压到新文件夹；无需 GitHub 账号或 Git。
-2. 选择一个 `labs` 子目录，在该目录打开终端和 AI 工作区，先阅读它的 README。
-3. 根据该案例的提示词操作，保留实际运行输出和修改记录。
+在本课堂中，Coding Agent 是能在授权范围内读取项目、编辑文件、调用终端，并根据真实运行结果继续调整的 AI 编程助手。
 
-也可使用 Git：
-
-```sh
-git clone https://github.com/2796923149akeman-jpg/coding-agent-debug-lab.git
-cd coding-agent-debug-lab
+```text
+人说明目标与验收标准
+        ↓
+AI 读取文件 → 制定下一步 → 编辑或执行 → 观察真实反馈
+                 ↑                         ↓
+                 └──── 结果未达标，继续调整 ──┘
+        ↓
+人检查代码差异、结果与任务是否一致
 ```
 
-**不要在仓库根目录直接运行成绩测试。** 应先进入 `labs/01-grade-stats`。照片素材必须先运行 `prepare.py` 初始化，不能把 ZIP 本身交给整理程序当作输入。
+关键不在于 AI 说“修好了”，而在于能看到它读了什么、改了什么、运行了什么，以及结果是否符合要求。[结合两个案例理解这个过程](docs/UNDERSTANDING_AGENTS.md)。
 
-推荐 Python 3.10+。Windows 可以用 `py` 替代 `python`，macOS / Linux 可以用 `python3`。照片练习安装依赖需要联网，素材初始化和本地运行不需要联网。AI 工具的账号与网络要求由各自服务决定。
+## 文件导航
 
-## 给汇报者和同学
+- [同学上手指南](docs/GETTING_STARTED.md)：从解压、开终端到两个案例的完整操作顺序。
+- [两人课堂演示安排](docs/CLASSROOM_GUIDE.md)：两个案例都在课堂演示，附衔接讲法和观察点。
+- [分步提示词](docs/STUDENT_PROMPTS.md)：每段发送后先检查结果，再继续下一步。
+- [实操记录模板](docs/EXPERIMENT_REPORT.md)：保存命令、输出、修改和自己的解释。
+- [AI 辅助生成说明](docs/AI_GENERATION.md)：案例设计、合成素材与可复现提示词。
+- [文件规范](docs/REPOSITORY_STRUCTURE.md)：代码、素材、输出和报告分别放哪里。
 
-- [两人汇报的实操安排](docs/CLASSROOM_GUIDE.md)：45 分钟与课后练习两种安排。
-- [两套提示词入口](docs/STUDENT_PROMPTS.md)：先复现再修改，不把预测输出当实测。
-- [练习记录模板](docs/EXPERIMENT_REPORT.md)：记录真实命令、结果、差异和人工判断。
-- [AI 辅助生成与来源](docs/AI_GENERATION.md)：说明哪些是已有材料，哪些是本次整理。
-- [文件规范与版本说明](docs/REPOSITORY_STRUCTURE.md)。
-
-公开内容为学生版，不含照片整理参考程序、答案索引或正确归档结果。成绩练习故意保留错误：初始 3 个测试中 2 个报错是正常状态。照片数据是程序生成的教学素材，视频是用于分类练习的占位文件，不代表可播放的视频。
-
-## 原成绩案例的旧链接
-
-原仓库地址保持不变。[`classroom-v1` 的旧版 ZIP](https://github.com/2796923149akeman-jpg/coding-agent-debug-lab/archive/refs/tags/classroom-v1.zip) 仍可下载，内部仍是原来的单案例目录；新资料统一使用 `classroom-v2`。
+公开包提供练习起点、操作说明与验收目标，不提供正确代码或整理成品。成绩案例初始两项报错是预设状态；照片案例的 `organize.py` 需要由你指挥 AI 创建。照片素材为程序生成的数据，视频为分类练习占位文件。

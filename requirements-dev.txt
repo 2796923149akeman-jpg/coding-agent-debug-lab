@@ -1,0 +1,2 @@
+# Optional maintainer checks; students do not need this file to run the labs.
+ruff==0.12.0

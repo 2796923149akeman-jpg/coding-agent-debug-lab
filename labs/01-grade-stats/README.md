@@ -1,8 +1,8 @@
-# 01 成绩统计纠错：课堂第一段演示
+# 01 成绩统计纠错
 
-课堂先演示本案例，再演示照片整理。把一个带有已知缺陷的小项目交给 AI，观察它如何阅读、运行测试、定位、修改和验证。个人操作建议预留 15～20 分钟。首次使用请先阅读 [同学上手指南](../../docs/GETTING_STARTED.md)。
+建议先完成本案例，再做照片整理。把一个带有已知缺陷的小项目交给 AI，观察它如何阅读、运行测试、定位、修改和验证。个人操作建议预留 15～20 分钟。首次使用请先阅读 [同学上手指南](../../docs/GETTING_STARTED.md)。
 
-**这是有意保留错误的教学起点。首次测试出现 `FAILED (errors=2)` 是正常现象。** 本项目用于课堂下载、修改和学习；只用 Python 标准库，无需安装第三方库，也不需要在项目中填写 API Key。
+**这是有意保留错误的教学起点。首次测试出现 `FAILED (errors=2)` 是正常现象。** 本项目用于下载、修改和学习；只用 Python 标准库，无需安装第三方库，也不需要在项目中填写 API Key。
 
 ## 1. 下载并打开
 
@@ -61,7 +61,7 @@ python grade_stats.py data/scores.csv
 
 重新解压后应再次出现 `FAILED (errors=2)`。
 
-完成本案例后，从当前终端执行 `cd ../02-photo-organizer`，继续 [第二段照片整理](../02-photo-organizer/README.md)。想理解两次操作共同体现的 Agent 工作循环，阅读 [理解指南](../../docs/UNDERSTANDING_AGENTS.md)。
+完成本案例后，从当前终端执行 `cd ../02-photo-organizer`，继续 [照片整理练习](../02-photo-organizer/README.md)。想理解两次操作共同体现的 Agent 工作循环，阅读 [理解指南](../../docs/UNDERSTANDING_AGENTS.md)。
 
 ## 这个案例如何生成
 
@@ -77,7 +77,6 @@ python grade_stats.py data/scores.csv
 | `docs/STUDENT_PROMPTS.md` | 分步提示词与一次性提示词 |
 | `docs/EXPERIMENT_REPORT.md` | 练习记录与评价标准 |
 | `docs/AI_GENERATION.md` | AI 辅助出题流程、复现提示词与来源说明 |
-| `docs/CLASSROOM_GUIDE.md` | 课堂第一段演示要点与完整安排入口 |
 | `provenance.json` | 三个原始案例文件的 SHA-256，用于核对来源 |
 
 基础练习不涵盖任意文本成绩、缺少列或文件不存在等情况。完成后可另开一份副本，让 AI 为零分、只有表头、前后空格等边界情况补充测试，再讨论错误输入应该如何处理。三个测试通过只能证明这些测试覆盖的场景通过。

@@ -3,7 +3,6 @@
 ```text
 README.md                       总入口
 docs/                           上手指南、概念说明、提示词与记录模板
-scripts/check_repository.py     分发材料的统一验证入口
 pyproject.toml                  静态检查与格式配置
 .editorconfig                   编辑器编码、缩进和换行约定
 requirements-dev.txt            可选的规范检查工具依赖
@@ -24,4 +23,6 @@ labs/
 - `.gitignore` 忽略虚拟环境、缓存、练习输出和本地记录。只提交代码、必要素材、依赖声明与说明。
 - 全部操作说明以当前双案例目录为准；先做成绩统计，再做照片整理。
 
-本仓库只提供实操所需的代码起点、素材、工具和说明，不提供正确代码或答案成品。需要重做时解压到新目录，保留上次结果。具体编码要求和检查方式见 [代码规范与检查](CODING_STANDARDS.md)。
+Python 代码使用 4 空格缩进、清晰命名和必要注释，异常应明确报错。可选的格式检查命令为 `python -m ruff check .` 和 `python -m ruff format --check .`，先安装 `requirements-dev.txt` 中的工具即可。
+
+本仓库只提供实操所需的代码起点、素材、工具和说明，不提供正确代码或答案成品。需要重做时解压到新目录，保留上次结果。
